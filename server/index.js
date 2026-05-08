@@ -4,12 +4,21 @@ const path    = require("path");
 const Database = require("better-sqlite3");
 const { v4: uuidv4 } = require("uuid");
 require("dotenv").config();
+const fs = require("fs");
 
 const app  = express();
 const PORT = process.env.PORT || 3001;
 
 // ─── DB ───────────────────────────────────────────────────────────────────────
-const DB_PATH = process.env.DB_PATH || path.join(__dirname, "shelf.db");
+const fs = require("fs");
+
+const DB_PATH = process.env.DB_PATH || path.join(__dirname, "data", "shelf.db");
+const DB_DIR = path.dirname(DB_PATH);
+
+if (!fs.existsSync(DB_DIR)) {
+  fs.mkdirSync(DB_DIR, { recursive: true });
+}
+
 const db = new Database(DB_PATH);
 db.pragma("journal_mode = WAL");
 
