@@ -1,4 +1,4 @@
-# 📚 Shelf — Books, Podcasts & Media Tracker
+# 📚 Brainfeed — Books, Podcasts & Media Tracker
 
 A beautiful personal tracker for everything you read, listen to, and watch.
 
