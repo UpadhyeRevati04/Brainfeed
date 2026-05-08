@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: bookshelf
+    env: node
+    buildCommand: "cd client && npm install && npm run build && cd ../server && npm install"
+    startCommand: "cd server && node index.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+      - key: DB_PATH
+        value: /var/data/bookshelf.db
+    disk:
+      name: bookshelf-data
+      mountPath: /var/data
+      sizeGB: 1

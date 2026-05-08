@@ -1,0 +1,104 @@
+:root {
+  --ink: #1c1510;
+  --ink-light: #3d2e22;
+  --paper: #faf6ef;
+  --cream: #f2e9d8;
+  --cream-dark: #e8d9c0;
+  --amber: #c8882a;
+  --amber-light: #e8aa50;
+  --amber-pale: #fdf3e0;
+  --rust: #a84030;
+  --sage: #4e7458;
+  --sage-pale: #e8f0e9;
+  --lavender: #6e5f88;
+  --lavender-pale: #ede8f5;
+  --teal: #3a7a80;
+  --teal-pale: #e0f0f2;
+  --rose: #b84060;
+  --rose-pale: #fde8ee;
+  --card: #fff9f2;
+  --border: #ddd0b8;
+  --border-light: #ede3cf;
+  --muted: #9a8878;
+  --shadow-sm: 0 1px 3px rgba(28,21,16,0.08), 0 1px 2px rgba(28,21,16,0.06);
+  --shadow: 0 4px 16px rgba(28,21,16,0.10), 0 1px 4px rgba(28,21,16,0.06);
+  --shadow-lg: 0 12px 40px rgba(28,21,16,0.14), 0 4px 12px rgba(28,21,16,0.08);
+  --shadow-glow-amber: 0 0 0 3px rgba(200,136,42,0.15), 0 4px 20px rgba(200,136,42,0.12);
+  --shadow-glow-sage: 0 0 0 3px rgba(78,116,88,0.15), 0 4px 20px rgba(78,116,88,0.12);
+  --shadow-glow-rose: 0 0 0 3px rgba(184,64,96,0.15), 0 4px 20px rgba(184,64,96,0.12);
+  --shadow-glow-teal: 0 0 0 3px rgba(58,122,128,0.15), 0 4px 20px rgba(58,122,128,0.12);
+  --radius: 14px;
+  --radius-sm: 8px;
+  --radius-lg: 20px;
+  --transition: all 0.22s cubic-bezier(.4,0,.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+h1, h2, h3, h4 { font-family: 'Lora', serif; font-weight: 700; line-height: 1.2; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font-family: 'DM Sans', sans-serif; }
+input, textarea, select { font-family: 'DM Sans', sans-serif; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--cream-dark); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border); }
+
+/* ── Animations ── */
+@keyframes fadeUp   { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn   { from { opacity:0; } to { opacity:1; } }
+@keyframes scaleIn  { from { opacity:0; transform:scale(0.93); } to { opacity:1; transform:scale(1); } }
+@keyframes slideInLeft { from { opacity:0; transform:translateX(-16px); } to { opacity:1; transform:translateX(0); } }
+@keyframes spin     { to { transform:rotate(360deg); } }
+@keyframes pulse    { 0%,100% { opacity:1; } 50% { opacity:0.5; } }
+@keyframes shimmer  { from { background-position:-200% 0; } to { background-position:200% 0; } }
+@keyframes float    { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-6px); } }
+@keyframes glow     { 0%,100% { box-shadow:var(--shadow-sm); } 50% { box-shadow:var(--shadow-glow-amber); } }
+
+.animate-fade-up   { animation: fadeUp 0.4s cubic-bezier(.4,0,.2,1) both; }
+.animate-fade-in   { animation: fadeIn 0.3s ease both; }
+.animate-scale-in  { animation: scaleIn 0.3s cubic-bezier(.4,0,.2,1) both; }
+.animate-slide-left { animation: slideInLeft 0.35s cubic-bezier(.4,0,.2,1) both; }
+
+/* Staggered children */
+.stagger > *:nth-child(1) { animation-delay: 0ms; }
+.stagger > *:nth-child(2) { animation-delay: 60ms; }
+.stagger > *:nth-child(3) { animation-delay: 120ms; }
+.stagger > *:nth-child(4) { animation-delay: 180ms; }
+.stagger > *:nth-child(5) { animation-delay: 240ms; }
+.stagger > *:nth-child(6) { animation-delay: 300ms; }
+
+/* ── Cover image shimmer skeleton ── */
+.img-skeleton {
+  background: linear-gradient(90deg, var(--cream) 25%, var(--cream-dark) 50%, var(--cream) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ── Card hover lift ── */
+.card-hover {
+  transition: var(--transition);
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
