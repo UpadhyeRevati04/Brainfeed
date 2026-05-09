@@ -82,9 +82,6 @@ brainfeed/
 ---
 
 ## System Architecture
-
-<h2 align="center">System Architecture</h2>
-
 <p align="center">
   <img src="assets\systemarchi.png" width="1000"/>
 </p>
