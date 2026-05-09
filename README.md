@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 # 📚 Brainfeed — Books, Podcasts & Media Tracker
-=======
 # 🧠 Brainfeed
->>>>>>> c24fb08 (Updated Readme file)
 
 > Track everything that feeds your brain — books, podcasts, movies & series — in one place.
 ## What is Brainfeed?
