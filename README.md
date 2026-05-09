@@ -9,6 +9,26 @@ A personal media diary. Log what you read, listen to, and watch. Add your though
 
 ---
 
+## Live Demo 
+https://brainfeed-xxl9.onrender.com
+
+## Scrrenshots 
+
+### Dashboard
+![](./assets/dashboard.png)
+
+![](./assets/2.png)
+
+### Books Library
+![](./assets/3.png)
+
+### Podcasts
+![](./assets/4.png)
+
+### Media Tracker
+![](./assets/media.png)
+
+
 ## Features
 
 **📚 Books**
