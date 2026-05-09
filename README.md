@@ -47,25 +47,6 @@ A personal media diary. Log what you read, listen to, and watch. Add your though
 
 ---
 
-## Getting Started
-
-**Prerequisites:** Node.js 18+
-
-```bash
-# 1. Install all dependencies
-npm run install:all
-
-# 2. Copy environment file
-cp server/.env.example server/.env      # Mac/Linux
-copy server\.env.example server\.env   # Windows
-
-# 3. Start both servers
-npm run dev
-```
-
-Open **http://localhost:5173**
-
----
 
 ## Project Structure
 
@@ -105,19 +86,8 @@ brainfeed/
 <h2 align="center">System Architecture</h2>
 
 <p align="center">
-  <img src="./assets/systemarchi.png" width="1000"/>
+  <img src="assets\systemarchi.png" width="1000"/>
 </p>
-
-## Environment Variables
-
-```env
-PORT=3001
-NODE_ENV=development
-CLIENT_URL=http://localhost:5173
-DB_PATH=./shelf.db
-```
-
----
 
 ## Deployment
 
