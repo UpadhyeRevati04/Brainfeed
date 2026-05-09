@@ -83,7 +83,7 @@ brainfeed/
 
 ## System Architecture
 <p align="center">
-  <img src="assets\systemarchi.png" width="1000"/>
+  <img src="assets/systemarchi.png" width="1000"/>
 </p>
 
 ## Deployment
