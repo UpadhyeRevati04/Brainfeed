@@ -2,16 +2,14 @@
 # 📚 Brainfeed — Books, Podcasts & Media Tracker
 
 > Track everything that feeds your brain — books, podcasts, movies & series — in one place.
+> ## Live Demo 
+https://brainfeed-xxl9.onrender.com
 ## What is Brainfeed?
 
 A personal media diary. Log what you read, listen to, and watch. Add your thoughts, mood, and reflections. See it all visualised on a dashboard with charts and a yearly goal tracker.
 
 ---
-
-## Live Demo 
-https://brainfeed-xxl9.onrender.com
-
-## Scrrenshots 
+## Screenshots 
 
 ### Dashboard
 ![](./assets/dashboard.png)
@@ -106,14 +104,6 @@ brainfeed/
 </p>
 
 ## Deployment
-
-### Railway
-1. Push repo to GitHub
-2. New Project → Deploy from GitHub
-3. Add Volume at `/var/data`
-4. Set env vars: `NODE_ENV=production`, `DB_PATH=/var/data/shelf.db`
-5. Build: `cd client && npm install && npm run build && cd ../server && npm install`
-6. Start: `cd server && node index.js`
 
 ### Render
 Connect repo → Render reads `render.yaml` automatically → Add disk at `/var/data`.
