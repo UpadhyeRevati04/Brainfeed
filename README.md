@@ -1,6 +1,5 @@
 
 # 📚 Brainfeed — Books, Podcasts & Media Tracker
-# 🧠 Brainfeed
 
 > Track everything that feeds your brain — books, podcasts, movies & series — in one place.
 ## What is Brainfeed?
